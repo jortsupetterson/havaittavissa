@@ -1,0 +1,1 @@
+export default ((size=16)=>{let s;for(let i=0;i<size;i++)s+=Math.floor(Math.random()*256).toString(16).padStart(2,'0');return s;})();
