@@ -1,4 +1,4 @@
-function o(t){return((t.headers.get("accept-language")||"").split(",")[0].split(";")[0].trim()||"en").split("-")[0].toLowerCase()}function r(t=16){let e="";for(let n=0;n<t;n++){let a=Math.floor(Math.random()*256).toString(16).padStart(2,"0");e+=a}return e}function i(t){return`
+function i(t){return((t.headers.get("accept-language")||"").split(",")[0].split(";")[0].trim()||"en").split("-")[0].toLowerCase()}function s(t=16){let n="";for(let a=0;a<t;a++){let e=Math.floor(Math.random()*256).toString(16).padStart(2,"0");n+=e}return n}function c(t){return`
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <meta name="robots" content="noindex" />
@@ -13,4 +13,4 @@ function o(t){return((t.headers.get("accept-language")||"").split(",")[0].split(
 <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin" />
 <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp" />
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'nonce-${t}'; style-src 'self' 'nonce-${t}'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'; object-src 'none';" />
-`}var x={async fetch(t,e,n){let a=await o(t),s=await r(),p=await i(s),c=new URL(t.url),l=c.hostname,m=c.pathname,u=await{"havaittavissa.fi":{"/":await import("./Home-FUTCFRIW.js").then(g=>g.default(a,s,p))}}[l][m];return new Response(`${u}`,{headers:{"Content-Type":"text/html"}})}};export{x as default};
+`}var x={async fetch(t,n,a){let e=await i(t),o=await s(),p=await c(o),l=new URL(t.url),m=l.hostname,u=l.pathname,h=await{"server.havaittavissa.workers.dev":{"/":await import("./Home-XHGQ6BRE.js").then(r=>r.default(e,o,p))},"havaittavissa.fi":{"/":await import("./Home-XHGQ6BRE.js").then(r=>r.default(e,o,p))}}[m][u];return new Response(`${h}`,{headers:{"Content-Type":"text/html"}})}};export{x as default};

@@ -54,6 +54,7 @@
     body {
       left: 50%;
       transform: translateX(-50%);
+      height: 100vh;
       aspect-ratio: 16/9;
       width: 100%;
       max-width: 1920px;
@@ -95,7 +96,6 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        min-width: 100%;
         gap: 1vh;
     }
     .aling {
@@ -105,8 +105,7 @@
     .left {
         position: absolute;
         left: 0;
-        justify-content: space-evenly;
-        min-width: 100%;
+        width: auto;
     }
     .center {
         position: absolute;
@@ -146,18 +145,14 @@
   .mainHeader {
       position: fixed;
       top: 0; left: 0; right: 0;
-      min-width: 100%;
       transition: transform 0.3s ease-in-out;
       z-index: 5;
       background: var(--bg);
       display: flex;
-      flex-direction: row;
-      gap: 3vw;
+      align-items: center;
+      justify-content: center;
       pointer-events: none;
       height: 10vh;
-    }
-    .mainHeader figure {
-      margin: 1vw;
     }
 </style>
   
@@ -183,9 +178,10 @@
   
     article#app {
       position: absolute;
-      min-height: max-content;
+      min-height: var(--app-h);
       width: var(--article-w);
       max-width: 100vw;
+      aspect-ratio: 9/16;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
@@ -195,7 +191,6 @@
       gap: 1vh;
       pointer-events: none;
       text-align: left;
-      padding-bottom: 10%;
     }
     article > * {
       min-width: 0;
@@ -203,11 +198,11 @@
       word-break: break-word;
       overflow-wrap: break-word;
       text-align: center;
-      max-width: 100%;
+      max-width: 90%;
     }
     section {
       width: 100%;
-      margin: 2.5vh 0 0 0;
+      margin: 2.5vh;
     }
   
     a, button, input, summary {
@@ -356,8 +351,13 @@
       })();
     </script>
   </div>
-  <header id="siteHeader" class="mainHeader">
+  <header id="siteHeader" class="mainHeader aling row">
     <style>
+
+
+
+
+
         .right details {
           min-width: max-content;
         }
@@ -409,11 +409,11 @@ transform: translate(50%, -50%);
   }
       </style>
       
-    <section>
+    <section class="left row aling">
     <figure class="logo"><a class="value" href="/">Havaittavissa</a></figure>
     <a class="siteLink" title="taustajärjestelmä" href="">taustajärjestelmä</a>
-    <a class="siteLink" title="Varaa aika tapaamiselle" href="">varaa aika</a>
     <a class="siteLink" title="Miksi teemme asiat miten teemme?" href="">meistä</a>
+    <a class="siteLink" title="Varaa aika tapaamiselle" href="">varaa aika</a>
     </section>
 
 
@@ -441,7 +441,7 @@ transform: translate(50%, -50%);
       <section class="column" id="hero">
       <style>
         #hero {
-          margin-top: 25vh;
+          margin-top: 15vh;
         }
       #hero  h1 {
           position: relative;
@@ -476,10 +476,6 @@ transform: translate(50%, -50%);
 
       <section class="column" id="services">
         <style>
-          #services {
-            margin-top: 10vh;
-          }
-
          .glass {
   background: linear-gradient(
     to bottom,
@@ -509,7 +505,7 @@ transform: translate(50%, -50%);
 #services h2 {
  text-align: left;
  font-size: medium;
-transform: translateX(-50%);
+transform: translateX(20%);
 }
 #services a {
 transform: translateY(300%)
@@ -560,7 +556,6 @@ transform: translateY(300%)
           #box1 {
             border-radius: 2vh;
             max-width: 80%;
-            margin-left: 10%;
           }
         </style>
         <section>
@@ -586,7 +581,7 @@ transform: translateY(300%)
       </section>
 <section>
   <footer>
-    <a class="siteLink" href="">sivuston asetukset</a>
+    <a href="">sivuston asetukset</a>
   </footer>
 </section>
     </article>

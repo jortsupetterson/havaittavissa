@@ -20,8 +20,7 @@
 		"enabled": true
 	},
 	"routes": [
-		"havaittavissa.fi/*",
-		"*.havaittavissa/*"
+
 	],
 	"dev": {
 		"port": 5001

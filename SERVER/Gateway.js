@@ -11,7 +11,10 @@ export default {
 	const host = url.hostname;
 	const path = url.pathname;
 
-	const routes = {
+	const routes = {	
+		"server.havaittavissa.workers.dev": {
+			"/": await import("./Routes/Pages/Home/index.js").then(m => m.default(lang, nonce, pageRules))
+		},
 		"havaittavissa.fi": {
 			"/": await import("./Routes/Pages/Home/index.js").then(m => m.default(lang, nonce, pageRules))
 		}
