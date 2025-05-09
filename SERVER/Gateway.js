@@ -1,6 +1,6 @@
-import getLang from "./Utilities/getLang.js";
-import getNonce from "./Utilities/getNonce.js";
-import getPageRules from "./Utilities/getPageRules.js";
+import getLang from "../LIB/getLang.js";
+import getNonce from "../LIB/getNonce.js";
+import getPageRules from "../LIB/getPageRules.js";
 
 export default {
   async fetch(request, env, ctx) {
@@ -13,10 +13,12 @@ export default {
 
 	const routes = {	
 		"server.havaittavissa.workers.dev": {
-			"/": await import("./Routes/Pages/Home/index.js").then(m => m.default(lang, nonce, pageRules))
+			"/": await import("./Routes/Pages/Leads/Introduction/index.js").then(m => m.default(lang, nonce, pageRules)),
+			"/varaa-aika": await import("./Routes/Pages/Leads/Booking/index.js").then(m => m.default(lang, nonce, pageRules)),
 		},
 		"havaittavissa.fi": {
-			"/": await import("./Routes/Pages/Home/index.js").then(m => m.default(lang, nonce, pageRules))
+			"/": await import("./Routes/Pages/Leads/Introduction/index.js").then(m => m.default(lang, nonce, pageRules)),
+			"/varaa-aika": await import("./Routes/Pages/Leads/Booking/index.js").then(m => m.default(lang, nonce, pageRules)),
 		}
 	}
 

@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Täysin kustomoidut verkkosivut yrityksellesi | Havaittavissa</title><link rel="shortcut icon" href="../Images/favicon.png" type="image/x-icon"><link rel="preload" href="../Fonts/Orbitron/Orbitron-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin><link rel="preload" href="../Fonts/Inter/Inter-VariableFont_opsz,wght.ttf" as="font" type="font/ttf" crossorigin><meta name="description" content="A lightweight, performance-obsessed responsive HTML/CSS base that scales from 100 to 5000 px with zero media queries and zero JavaScript-driven layout hacks. The only DOM change? Optional asides. That’s how we hit LCP < 2.5s, CLS 0, and TBT 0."><style>@import url("../Styles/layout.css");
+  @import url("../Styles/visual.css");
+  @import url("../Styles/accessories.css");
+  @import url("../Styles/siteHeader.css");
+  @import url("../Styles/siteContent.css");
+  @import url("../Styles/siteFooter.css");</style><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://jori.dev/#website","url":"https://jori.dev/","name":"Responsive Project","description":"A lightweight, performance-first base for web apps. No media queries. No bloated JS. Just pure semantic velocity.","inLanguage":"en","publisher":{"@id":"https://jori.dev/#person"},"potentialAction":{"@type":"SearchAction","target":"https://jori.dev/?q={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"Person","@id":"https://jori.dev/#person","name":"Jori Lehtinen","url":"https://jori.dev/","email":"mailto:lehtinenjori03@gmail.com","jobTitle":"Application Developer","sameAs":[]},{"@type":"SoftwareApplication","@id":"https://jori.dev/#app","name":"Responsive Base","url":"https://jori.dev/","applicationCategory":"WebApplication","operatingSystem":"All","softwareVersion":"1.0.0","author":{"@id":"https://jori.dev/#person"},"description":"A raw, media-query-free, near-zero-JS solution for real responsiveness.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}]}</script></head><body><div class="background"><style>#lightBeamWrapper{position:fixed;top:50vh;width:100vw;height:35vh;overflow:visible}#quad{transition:all .3s ease-in-out;fill:none;stroke:url(#lineGradient);stroke-width:10;vector-effect:non-scaling-stroke;opacity:.9;filter:blur(.5vh) drop-shadow(0 0 1vh #B0C4DE) drop-shadow(0 0 1vh rgba(21, 67, 105, 1)) drop-shadow(0 0 5vh rgba(21, 67, 105, 1))}#marker{fill:#ffffff;stroke:var(--c1);stroke-width:1;filter:blur(1vh) drop-shadow(0 0 1vh #B0C4DE);opacity:.9}</style><svg id="lightBeamWrapper"><defs><linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#20659E"/><stop offset="15%" stop-color="#FFFFFF"/><stop offset="30%" stop-color="#20659E"/><stop offset="45%" stop-color="#FFFFFF"/><stop offset="60%" stop-color="#20659E"/><stop offset="100%" stop-color="#FFFFFF"/></linearGradient></defs><path id="quad"/><circle id="marker" r="5"><animateMotion dur="5s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.1;1" rotate="auto"><mpath xlink:href="#quad"/></animateMotion></circle></svg><script>(function() {
+        const svgContainer = document.getElementById('lightBeamWrapper');
+        const pathEl = document.getElementById('quad');
+  
+        const corners = [
+          { fx: 0.00, fy: 0.03 },
+          { fx: 0.15, fy: 0.03 },
+          { fx: 0.30, fy: 0.15 },
+          { fx: 0.45, fy: 0.15 },
+          { fx: 0.60, fy: 0.33 },
+          { fx: 1.00, fy: 0.33 }
+        ];
+  
+        const rIC = window.requestIdleCallback || function(fn) {
+          return setTimeout(() => fn({ timeRemaining: () => 0 }), 200);
+        };
+  
+        function updatePath() {
+          const { width: W, height: H } = svgContainer.parentElement.getBoundingClientRect();
+          let d = '';
+          for (let i = 0; i < corners.length; i++) {
+            const p = corners[i];
+            const x = p.fx * W;
+            const y = p.fy * H;
+            d += (i === 0 ? 'M' : 'L') + x + ',' + y;
+          }
+          pathEl.setAttribute('d', d);
+          pathEl.getTotalLength();
+        }
+  
+        function schedulePathUpdate() {
+          rIC(updatePath);
+        }
+
+        schedulePathUpdate();
+        window.addEventListener('resize', schedulePathUpdate);
+      })();</script></div><header id="siteHeader" class="mainHeader"><section><figure class="logo"><a class="value" href="/">Havaittavissa</a></figure><a class="siteLink" title="taustajärjestelmä" href="">taustajärjestelmä</a> <a class="siteLink" title="Varaa aika tapaamiselle" href="">varaa aika</a> <a class="siteLink" title="Miksi teemme asiat miten teemme?" href="">meistä</a></section><section class="center"><dialog><noscript>Tämä verkkosivu tarvitsee JavaScriptiä toimiakseen, olehyvä ja laita se päälle</noscript></dialog></section><section class="right column aling"><details><summary>kirjaudu sisään</summary><ul><li><a class="siteLink" title="Kirjaudu tarkastelemaan asiakkuuttasi" href="https://asiakkuus.havaittavissa.fi">Asiakkuus</a></li><li><a class="siteLink" title="Kirjaudu Havaittavissa henkilökunnan työtilaan" href="https://henkilökunta.havaittavissa.fi">Henkilökunta</a></li></ul></details></section></header><main><article id="app"><section class="column" id="hero"><style>#hero{margin-top:25vh}#hero h1{position:relative;font-size:x-large;left:0;text-align:left;margin:0}#hero p{position:relative;text-align:left;font-size:small;margin:0;transform:translate(2.5%,2.5%)}@media only screen and (orientation:portrait){#hero h1{font-size:larger}#hero p{font-size:small}}</style><h1 class="value">TÄYSIN KUSTOMOITU<br>VERKKOYMPÄRISTÖ YRITYKSELLESI</h1><p>Rakennamme yrityksellesi täysin räätälöidyt verkkosivut, joiden taustalle<br>luomme juuri sinun yrityksesi tarpeisiin suunnitellun verkkoympäristön,<br>jolla hallitset liiketoimintasi prosesseja.</p></section><section class="column" id="services"><style>#services{margin-top:10vh}#services section{justify-content:center;align-items:center;position:relative;gap:1vh;margin:0 2.5vh 0 2.5vh;width:max-content}#services div{width:auto;max-width:250px;height:min-content;text-align:left}#services h2{text-align:left;font-size:medium;transform:translateX(-50%)}#services a{transform:translateY(300%)}</style><section class="row"><h2 class="value">Step 1:<br>Tehdään toimivat verkkosivut</h2></section><section class="row aling"><section id="seo" class="column"><style></style><label for="seo">Ensin varmistamme että sivustosi löytyy.</label><div class="glass"><p class="value">LÖYDETTÄVYYS</p><p>Varmistamme, että sivustosi löytyy hakukoneista oikeilla hakusanoilla.</p><p>Rakennamme teknisesti optimoidun sivuston, jossa SEO-perusta, sivunopeus ja mobiilitoimivuus ovat kunnossa alusta alkaen.</p></div></section><section id="content" class="column"><style>#content{transform:translateY(10%)}</style><label for="content">Sitten, että se toimii.</label><div class="glass"><p class="value">SISÄLTÖ</p><p>Autamme kiteyttämään viestisi niin, että se puhuttelee asiakastasi.</p><p>Suunnittelemme sisällön tavoitteidesi pohjalta: myynti, informaatio tai asiakaspalvelu - aina selkeästi ja johdonmukaisesti.</p></div></section></section></section><section id="backend"><style>#apps{text-align:left}#box1{border-radius:2vh;max-width:80%;margin-left:10%}</style><section><h3 class="value">RAKENNAMME VERKKOSIVUILLE TOIMINNANOHJAUSJÄRJESTELMÄN</h3><p>-johon luomme <span class="value">juuri sinun liiketoimintaa</span> helpottavia sovelluksia.</p></section><section class="row"><h4 id="apps" class="value">Step 2:<br>Luodaan digitaalinen ympäristö liiketoimintasi tueksi:</h4></section><section class="row aling"><section id="applications" class="column"><div id="box1" class="glass"><p class="value">SOVELLUKSET</p><p>Suunnittelemme ja toteutamme yrityksesi tarpeisiin räätälöityjä digitaalisia työkaluja - kuten ajanvaraus-, yhteydenotto- ja hallintasovelluksia - jotka liitetään saumattomasti verkkosivuillesi ilman kolmannen osapuolen riippuvuuksia.</p><p>Kaikki toimii yhtenäisenä kokonaisuutena, täydessä hallinnassasi, alusta alkaen käsintehtynä - suorituskykyä ja joustavuutta unohtamatta.</p></div></section></section><section><footer><a class="siteLink" href="">sivuston asetukset</a></footer></section></section></article></main></body></html>

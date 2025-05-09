@@ -4,254 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Täysin kustomoidut verkkosivut yrityksellesi | Havaittavissa</title>
-  <link rel="shortcut icon" href="/Images/favicon.png" type="image/x-icon">
-  <link rel="preload" href="/Fonts/Orbitron/Orbitron-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="preload" href="/Fonts/Inter/Inter-VariableFont_opsz,wght.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="shortcut icon" href="../Images/favicon.png" type="image/x-icon">
+  <link rel="preload" href="../Fonts/Orbitron/Orbitron-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="../Fonts/Inter/Inter-VariableFont_opsz,wght.ttf" as="font" type="font/ttf" crossorigin>
 <meta name="description" content="A lightweight, performance-obsessed responsive HTML/CSS base that scales from 100 to 5000 px with zero media queries and zero JavaScript-driven layout hacks. The only DOM change? Optional asides. That’s how we hit LCP < 2.5s, CLS 0, and TBT 0.">
 
-  <style id="commonStyles">
-@font-face {
-  font-family: 'Orbitron';
-  font-style: normal;
-  font-weight: 100 200 300 400 500 600 700 800 900;
-  font-display: swap;
-  src:
-    url('../Fonts/Orbitron/Orbitron-VariableFont_wght.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 100 200 300 400 500 600 700 800 900;
-  font-display: swap;
-  src:
-    url('../Fonts/Inter/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
-}
-    :root {
-      --bg: #000000;
-      --txt: #ffffff;
-      --c1: #154369;
-      --c2: #7f5f9f;
-      --c3: #ffde59;
-      --ghost: #b0c0c6;
-      --app-h: 100vh;
-      --app-w: calc(var(--app-h) * 9 / 16);
-      --article-w: 80%;
-    }
-    html {
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
-      background-color: var(--bg);
-      color: var(--txt);
-      pointer-events: none;
-      text-rendering: optimizeLegibility;
-      font-kerning: none;
-      font-variant-ligatures: none;
-      font-feature-settings: 'liga' 0, 'kern' 0;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-    body {
-      left: 50%;
-      transform: translateX(-50%);
-      aspect-ratio: 16/9;
-      width: 100%;
-      max-width: 1920px;
-      position: fixed;
-      margin: 0;
-      padding: 0;
-      font-weight: 100;
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
-               'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-               'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-    ::-webkit-scrollbar {
-      width: 10px;
-      height: 10px;
-    }
-    ::-webkit-scrollbar-track {
-      background-color: transparent;
-    }
-    ::-webkit-scrollbar-thumb {
-      background-color: rgba(176, 192, 198, 0.33);
-      border-radius: 0;
-    }
-    ::-webkit-scrollbar-thumb:horizontal {
-      min-width: 48px;
-    }
-    ::-webkit-scrollbar-button {
-      display: none;
-      width: 0;
-      height: 0;
-    }
-    ::-webkit-scrollbar-corner {
-      background-color: rgba(176, 192, 198, 0.5);
-    }
-    .column {
-        display: flex;
-        flex-direction: column;
-    }
-    .row {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        min-width: 100%;
-        gap: 1vh;
-    }
-    .aling {
-        align-items: center;
-        justify-content: center;
-    }
-    .left {
-        position: absolute;
-        left: 0;
-        justify-content: space-evenly;
-        min-width: 100%;
-    }
-    .center {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%,0);
-        width: auto;
-    }
-    .right {
-        position: absolute;
-        right: 0;
-        width: auto;
-    }
-    .background {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  min-width: 100vw;
-  min-height: 100vh;
-  z-index: 0;
-  background: linear-gradient(
-    190deg,
-    #000000 40%,
-    #0B2236 65%,
-    #051019 83%,
-    #000000 95%
-  );
-  filter: blur(0.2vh);
-}
-.value {
-  font-family: 'Orbitron', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 300;
-}
-    </style>
-
-    <style id="mainHeaderStyles">
-  .mainHeader {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      min-width: 100%;
-      transition: transform 0.3s ease-in-out;
-      z-index: 5;
-      background: var(--bg);
-      display: flex;
-      flex-direction: row;
-      gap: 3vw;
-      pointer-events: none;
-      height: 10vh;
-    }
-    .mainHeader figure {
-      margin: 1vw;
-    }
+<style>
+  @import url("../Styles/layout.css");
+  @import url("../Styles/visual.css");
+  @import url("../Styles/accessories.css");
+  @import url("../Styles/siteHeader.css");
+  @import url("../Styles/siteContent.css");
+  @import url("../Styles/siteFooter.css");
 </style>
-  
-  <style>
-    main {
-      display: flex;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      min-height: 100%;
-      max-height: 100%;
-      overflow-y: scroll;
-      overflow-x: hidden;
-      z-index: 1;
-      contain: content;
-      pointer-events: auto;
-      touch-action: manipulation;
-      will-change: scroll-position;
-      scroll-behavior: smooth;
-    }
-  
-  
-  
-    article#app {
-      position: absolute;
-      min-height: max-content;
-      width: var(--article-w);
-      max-width: 100vw;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      gap: 1vh;
-      pointer-events: none;
-      text-align: left;
-      padding-bottom: 10%;
-    }
-    article > * {
-      min-width: 0;
-      white-space: normal;
-      word-break: break-word;
-      overflow-wrap: break-word;
-      text-align: center;
-      max-width: 100%;
-    }
-    section {
-      width: 100%;
-      margin: 2.5vh 0 0 0;
-    }
-  
-    a, button, input, summary {
-      pointer-events: auto;
-      cursor: pointer;
-      touch-action: manipulation;
-      text-decoration: none;
-      color: var(--txt);
-      margin: 1.5vw;
-    }
 
-    .siteLink {
-      opacity: 75%;
-      color: var(--txt);
-          text-decoration: none;
-          margin: 1.5vw;
-        transition: all 0.2s ease-in-out;
-    }
-    .siteLink:hover {
-            scale: 1.1;
-            font-weight: 300;
-            opacity: 1;
-        }
-  </style>
-
-  <style id="mainFooterStyles">
-        .mainFooter {
-      z-index: 5;
-      position: fixed;
-      bottom: 0;
-      padding-bottom: env(safe-area-inset-bottom, 0);
-      width: 100%;
-      height: 5%;
-      min-height: max-content;
-      justify-content: space-evenly;
-      align-items: center;
-      contain: content;
-    }
-  </style>
-
-  
-
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://jori.dev/#website","url":"https://jori.dev/","name":"Responsive Project","description":"A lightweight, performance-first base for web apps. No media queries. No bloated JS. Just pure semantic velocity.","inLanguage":"en","publisher":{"@id":"https://jori.dev/#person"},"potentialAction":{"@type":"SearchAction","target":"https://jori.dev/?q={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"Person","@id":"https://jori.dev/#person","name":"Jori Lehtinen","url":"https://jori.dev/","email":"mailto:lehtinenjori03@gmail.com","jobTitle":"Application Developer","sameAs":[]},{"@type":"SoftwareApplication","@id":"https://jori.dev/#app","name":"Responsive Base","url":"https://jori.dev/","applicationCategory":"WebApplication","operatingSystem":"All","softwareVersion":"1.0.0","author":{"@id":"https://jori.dev/#person"},"description":"A raw, media-query-free, near-zero-JS solution for real responsiveness.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}]}</script>
-
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://jori.dev/#website","url":"https://jori.dev/","name":"Responsive Project","description":"A lightweight, performance-first base for web apps. No media queries. No bloated JS. Just pure semantic velocity.","inLanguage":"en","publisher":{"@id":"https://jori.dev/#person"},"potentialAction":{"@type":"SearchAction","target":"https://jori.dev/?q={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"Person","@id":"https://jori.dev/#person","name":"Jori Lehtinen","url":"https://jori.dev/","email":"mailto:lehtinenjori03@gmail.com","jobTitle":"Application Developer","sameAs":[]},{"@type":"SoftwareApplication","@id":"https://jori.dev/#app","name":"Responsive Base","url":"https://jori.dev/","applicationCategory":"WebApplication","operatingSystem":"All","softwareVersion":"1.0.0","author":{"@id":"https://jori.dev/#person"},"description":"A raw, media-query-free, near-zero-JS solution for real responsiveness.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}]}</script>
     
 </head>
 <body>
@@ -357,65 +124,13 @@
     </script>
   </div>
   <header id="siteHeader" class="mainHeader">
-    <style>
-        .right details {
-          min-width: max-content;
-        }
-        .right details > summary {
-          position: static;
-          display: block;
-          cursor: pointer;
-          pointer-events: auto;
-          min-width: max-content;
-          padding: 0;
-          margin-right: 5%;
-        }
-        .right details > ul {
-          position: absolute;
-          top: 100%;
-          left: 0;
-          padding: 0;
-          list-style: none;
-          pointer-events: auto;
-          z-index: 10;
-          margin-right: 5%;
-        }
-        .right details > ul li a {
-          display: block;
-          padding: 0.25em 1em;
-          color: var(--txt);
-          text-decoration: none;
-          pointer-events: auto;
-        }
-        @media only screen and (orientation: portrait) {
-          .right details {
-transform: translate(50%, -50%);
-          }
-          .right details > ul {
-          transform: translate(50%,-33%);
-          }
-          .left figure {
-            position: fixed;
-            top: 0;
-            left: 0;
-          }
-          .mainHeader .siteLink {
-            position: relative;
-            top: 0%;
-            left: 0%;
-            transform: translate(-55%,50%);
-            margin-right: 5vw;
-          }
-  }
-      </style>
-      
+
     <section>
     <figure class="logo"><a class="value" href="/">Havaittavissa</a></figure>
     <a class="siteLink" title="taustajärjestelmä" href="">taustajärjestelmä</a>
     <a class="siteLink" title="Varaa aika tapaamiselle" href="">varaa aika</a>
     <a class="siteLink" title="Miksi teemme asiat miten teemme?" href="">meistä</a>
     </section>
-
 
     <section class="center">
     <dialog><noscript>Tämä verkkosivu tarvitsee JavaScriptiä toimiakseen, olehyvä ja laita se päälle</noscript></dialog>
@@ -480,18 +195,6 @@ transform: translate(50%, -50%);
             margin-top: 10vh;
           }
 
-         .glass {
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.5) 0%,
-    rgba(0, 0, 0, 0.1) 100%
-  );
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  border-radius: 15%;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 2vw;
-}
 #services section {
   justify-content: center;
   align-items: center;

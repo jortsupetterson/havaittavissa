@@ -1,0 +1,23 @@
+{
+     "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Kilpailuta Online",
+    "url": "https://kilpailuta.online/fi",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "ALL",
+    "description": "Kilpailuta ja vertaile palveluita helposti netissä. Suomen johtava tarjouspyyntöpalvelu yrityksille ja kuluttajille.",
+    "author": {
+      "@type": "Organization",
+      "name": "Innosoon Online Oy",
+      "url": "https://innosoon.online"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    "screenshot": "/Images/kilpailuta-tumma-logo.svg",
+    "softwareVersion": "1.0.0",
+    "datePublished": "2025-01-01"
+}

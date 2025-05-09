@@ -1,0 +1,1 @@
+a,button,input,summary{pointer-events:auto;cursor:pointer;touch-action:manipulation;text-decoration:none;color:var(--txt);margin:1.5vw}.siteLink{opacity:75%;color:var(--txt);text-decoration:none;margin:1.5vw;transition:all .2s ease-in-out}.siteLink:hover{scale:1.1;font-weight:300;opacity:1}

@@ -2,19 +2,26 @@
 	"name": "havaittavissa",
 	"version": "0.0.0",
 	"private": true,
+	"type": "module",
 	"scripts": {
-		"build": "node build.js",
-		"build:server": "esbuild SERVER/Gateway.js --bundle --minify --format=esm --splitting --outdir=Prod_server",
-		"build:watch": "nodemon --watch ASSETS --watch SERVER --ext js,css,html --exec \"npm run build && npm run build:server\"",
+		"build:assets": "node build-assets.js",
+		"build:server": "node build-server.js",
+		"build:watch": "nodemon --watch ASSETS --watch SERVER --ext js,css,html --exec \"npm run build:assets && npm run build:server\"",
 		"dev": "npm run build && npm run build:server && wrangler dev",
 		"deploy": "npm run build && npm run build:server && wrangler deploy"
 	},
 	"devDependencies": {
-		"@cloudflare/vitest-pool-workers": "^0.8.19",
+		"@cloudflare/vitest-pool-workers": "^0.8.27",
+		"clean-css": "^5.3.3",
 		"esbuild": "^0.25.4",
-		"glob": "11.0.2",
-		"html-minifier-terser": "7.2.0",
+		"glob": "^11.0.2",
+		"html-minifier-terser": "^7.2.0",
 		"nodemon": "3.1.10",
-		"wrangler": "4.14.1"
+		"rehype": "^13.0.2",
+		"rehype-minify-json-script": "^4.0.1",
+		"rehype-parse": "^9.0.1",
+		"rehype-stringify": "^10.0.1",
+		"unified": "^11.0.5",
+		"wrangler": "^4.14.4"
 	}
 }
